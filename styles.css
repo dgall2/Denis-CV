@@ -10,6 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+    text-align: center;
 }
 
 header {
@@ -19,30 +20,7 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
+#essays {
     margin: 20px 0;
     padding: 15px;
     background: white;
@@ -50,25 +28,45 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.essay-item {
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.essay-item a {
     border-bottom: 2px solid #007BFF;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
-.job, .degree {
-    margin-bottom: 15px;
+.essay-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+}
+
+.essay-item:hover .essay-popup {
+    display: block;
+}
+
+.essay-popup img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 footer {
     text-align: center;
+    margin-top: 30px;
     padding: 15px;
-    background: #007BFF;
-    color: white;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-footer h2 {
-    margin-bottom: 10px;
 }
